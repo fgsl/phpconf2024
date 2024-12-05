@@ -1,0 +1,13 @@
+<tr>
+    <td><a href="<?=$this->url('pensadores',[
+        'action' => 'edit',
+        'codigo' => $this->codigo
+        ])?>"><?=$this->codigo?></a></td>
+    <td><?=$this->nome?></td>
+    <td><a href="<?=$this->url('pensadores',[
+        'action' => 'delete',
+        'codigo' => $this->codigo
+    ])?>">
+        <img src="<?=$this->basePath() . '/img/delete.png'?>">
+    </a></td>
+</tr>

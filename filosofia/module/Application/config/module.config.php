@@ -34,7 +34,7 @@ return [
             'pensadores' => [
                 'type'    => Segment::class,
                 'options' => [
-                    'route'    => '/pensadores[/:action]',
+                    'route'    => '/pensadores[/:action[/:codigo]]',
                     'defaults' => [
                         'controller' => Controller\PensadorController::class,
                         'action'     => 'index',

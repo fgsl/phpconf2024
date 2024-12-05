@@ -13,5 +13,14 @@
  */
 
 return [
-    // ...
-];
+    'db' => [
+        'driver' => 'Mysqli',
+        'database' => 'filosofia',
+        'hostname' => 'localhost'
+    ],
+    'service_manager' => [
+        'factories' => [
+            'DbAdapter' => Laminas\Db\Adapter\AdapterServiceFactory::class
+        ]  
+    ]
+        ];

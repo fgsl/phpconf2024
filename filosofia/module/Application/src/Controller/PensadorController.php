@@ -20,18 +20,32 @@ class PensadorController extends AbstractActionController
 
     public function indexAction()
     {
-        return new ViewModel();
+        $pensadores = $this->pensadorTable->getAll();
+        return new ViewModel([
+            'pensadores' => $pensadores
+        ]);
     }
 
     public function editAction(): ViewModel
     {
-        return new ViewModel();
+        $codigo = (int) $this->params('codigo',0);
+        $pensador = $this->pensadorTable->getByCodigo($codigo);
+        return new ViewModel([
+            'pensador' => $pensador
+        ]);
     }
 
     public function saveAction(): ViewModel
     {
         $pensador = new Pensador($_POST);
         $this->pensadorTable->save($pensador);
+        return new ViewModel();
+    }
+
+    public function deleteAction(): ViewModel
+    {
+        $codigo = (int) $this->params('codigo',0);        
+        $this->pensadorTable->delete($codigo);
         return new ViewModel();
     }
 

@@ -1,5 +1,11 @@
-<h1>Incluir pensador</h1>
+<?php
+$operacao = $this->pensador->codigo == 0 ? 'Incluir' : 'Alterar'
+?>
+<h1><?=$operacao?> pensador</h1>
 <form action="<?=$this->url('pensadores',['action'=>'save'])?>" method="post">
-    Nome: <input type="text" name="nome"/>
+    Nome: <input type="text" name="nome" value="<?=$this->pensador->nome?>"/>
+    <input type="hidden" name="codigo" value="<?=$this->pensador->codigo?>"/>
     <input type="submit" value="gravar"/>
 </form>
+
+<a href="<?=$this->url('pensadores')?>">Cadastro de Pensadores</a>

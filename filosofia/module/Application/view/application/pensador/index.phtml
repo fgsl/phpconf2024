@@ -1,2 +1,12 @@
 <h1>Cadastro de Pensadores</h1>
 <a href="<?=$this->url('pensadores',['action'=>'edit'])?>">Incluir pensador</a>
+<table class="table">
+<thead>
+    <th>Código</th>
+    <th>Nome</th>
+    <th>Remover</th>
+</thead>
+<tbody>
+    <?=$this->partialLoop('pensadores.phtml',$this->pensadores)?>
+</tbody>
+</table>

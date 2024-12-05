@@ -46,7 +46,7 @@ return [
     'controllers' => [
         'factories' => [
             Controller\IndexController::class => InvokableFactory::class,
-            Controller\PensadorController::class => InvokableFactory::class
+            Controller\PensadorController::class => Controller\PensadorControllerFactory::class
         ],
     ],
     'view_manager' => [

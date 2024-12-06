@@ -14,8 +14,12 @@
         "laminas/laminas-component-installer": "^3.4.0",
         "laminas/laminas-db": "^2.20",
         "laminas/laminas-development-mode": "^3.12.0",
+        "laminas/laminas-filter": "^2.39",
+        "laminas/laminas-i18n": "^2.29",
+        "laminas/laminas-inputfilter": "^2.31",
         "laminas/laminas-mvc": "^3.7.0",
-        "laminas/laminas-skeleton-installer": "^1.3.0"
+        "laminas/laminas-skeleton-installer": "^1.3.0",
+        "laminas/laminas-validator": "2.64.2"
     },
     "require-dev": {
         "dealerdirect/phpcodesniffer-composer-installer": "^1.0",

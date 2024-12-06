@@ -38,8 +38,15 @@ class PensadorController extends AbstractActionController
     public function saveAction(): ViewModel
     {
         $pensador = new Pensador($_POST);
-        $this->pensadorTable->save($pensador);
-        return new ViewModel();
+        $gravou = false;
+        $mensagem = 'dados inválidos';
+        if ($pensador->isValid()) {
+            $gravou = (bool) $this->pensadorTable->save($pensador);
+            $mensagem = $gravou ? 'Gravado com sucesso!' : 'Falha na gravação';
+        }
+        return new ViewModel([
+            'mensagem' => $mensagem
+        ]);
     }
 
     public function deleteAction(): ViewModel

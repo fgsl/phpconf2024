@@ -32,5 +32,8 @@ Referências:
 Na segunda aula aprendemos:
 
 * Como criar, recuperar, atualizar e apagar registros de uma tabela usando a classe TableGateway do Laminas;
-* 
+* Como criar filtros com [Laminas Filter](https://docs.laminas.dev/laminas-filter)
+* Como criar validadores com [Laminas Validator](https://docs.laminas.dev/laminas-validator/)
+* Como combinar filtros e validadores com [Laminas Input Filter](https://docs.laminas.dev/laminas-inputfilter/)
 
+O componente Laminas Input Filter implementa o padrão de projeto [Chain of Responsibility](https://refactoring.guru/design-patterns/chain-of-responsibility)
